@@ -2,8 +2,8 @@
 
 แอปพลิเคชันจัดการรายรับ-รายจ่ายส่วนบุคคล สร้างด้วย **HTML**, **Tailwind CSS** และ **TypeScript**
 สามารถบันทึก ดูสรุป และค้นหารายการได้อย่างสะดวก รองรับการใช้งานบนมือถือ (Responsive)
-**เก็บข้อมูลบน localStorage ไม่ต้องมี Backend**
-
+**เก็บข้อมูลบน localStorage ไม่ต้องมี Backend** <br><br>
+Youtube: https://youtu.be/Y-adaXXEh7Q
 ---
 
 ## ✨ ฟีเจอร์
