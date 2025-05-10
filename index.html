@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>บันทึกรายรับ-รายจ่าย</title>
+    <script defer src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body style="background-image: url('./assets/images/bg1.jpg'); background-size: cover; background-position: center;">
+    <div class="max-w-6xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold text-center mb-6">บันทึกรายรับ-รายจ่าย</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 p-4 rounded-lg shadow">
+                <form id="form" class="mb-4">
+                    <input type="text" id="name" placeholder="ชื่อ" class="w-full mb-2 p-2 border rounded" autocomplete="off">
+                    <input type="number" id="amount" placeholder="จำนวน ( +รายรับ / -รายจ่าย )" class="w-full mb-2 p-2 border rounded" autocomplete="off">
+                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">บันทึก</button>
+                </form>
+                <input type="text" id="search" placeholder="ค้นหา..." class="w-full mb-2 p-2 border rounded" autocomplete="off">
+                <select id="filter" class="w-full mb-4 p-2 border rounded">
+                    <option value="all">ทั้งหมด</option>
+                    <option value="income">รายรับ</option>
+                    <option value="expense">รายจ่าย</option>
+                </select>
+            </div>
+            <div>
+                <div class="text-center mb-4 bg-gray-50 p-4 rounded-lg shadow">
+                    <h2 class="text-xl mb-2">ยอดรวม</h2>
+                    <p id="balance" class="text-2xl font-semibold">฿0</p>
+                </div>
+                <div class="flex justify-around mb-4 bg-gray-50 p-4 rounded-lg shadow">
+                    <div>
+                        <h3 class="text-green-600">รายรับ</h3>
+                        <p id="income" class="text-green-500">฿0</p>
+                    </div>
+                    <div>
+                        <h3 class="text-red-600">รายจ่าย</h3>
+                        <p id="expense" class="text-red-500">฿0</p>
+                    </div>
+                </div>
+                <ul id="transactionList" class="space-y-2 mb-4 bg-gray-50 p-4 rounded-lg shadow max-h-96 overflow-y-auto"></ul>
+                <div id="pagination" class="flex justify-center items-center mt-4 space-x-2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
